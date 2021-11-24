@@ -23,7 +23,7 @@
 
 - Lucas Coelho Paulino
 
-- Leandro De Almeida Camargo
+- Leandro De Almeida Camargo (Petrolesk)
 
 - Luis Felipe Saldanha Mourão De Souza
 
