@@ -11,7 +11,6 @@ const MyHome = () => {
         <h1>oi</h1>
         <Footer/>
         </>
-        
     )
 }
 
