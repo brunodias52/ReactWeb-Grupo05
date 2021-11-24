@@ -16,7 +16,7 @@
 
 - Igor Vicente Haubrich
 
-- Lucas Ferreira Seixas (-Cryss-)
+- Lucas Ferreira Seixas
 
 - Bruno Prata Dias
 
@@ -25,5 +25,7 @@
 - Leandro De Almeida Camargo
 
 - Luis Felipe Saldanha Mourão De Souza
+
+--------------------------------------------------------------------
    
    
