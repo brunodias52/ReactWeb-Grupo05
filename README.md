@@ -1,4 +1,4 @@
-# ReactWeb-Grupo05 #
+# ReactWeb-Grupo05 # 
 
 <span>
   <img src="https://img.shields.io/static/v1?label=React&message=ReactJS&color=blue&style=for-the-badge&logo=React"/>  
@@ -15,7 +15,7 @@
 
 - Igor Vicente Haubrich
 
-- Lucas Ferreira Seixas
+- Lucas Ferreira Seixas (Cryss)
 
 - Bruno Prata Dias
 
