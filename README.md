@@ -1,5 +1,6 @@
 # ReactWeb-Grupo05 #
 
+
 <span>
   <img src="https://img.shields.io/static/v1?label=React&message=ReactJS&color=blue&style=for-the-badge&logo=React"/>  
   <img src="https://img.shields.io/static/v1?label=Styled-Components&message=Styles&color=violet&style=for-the-badge&logo=styled-components"/>
@@ -11,7 +12,7 @@
 ### 📅 Data final para entrega:  26/11/2021 23:59h.
   
 ## Desenvolvedores 💻
-- Guilherme Dideco Antunes Do Valle - (Facilitador)
+- Guilherme Dideco Antunes Do Valle - (facilitador)
 
 - Igor Vicente Haubrich
 
