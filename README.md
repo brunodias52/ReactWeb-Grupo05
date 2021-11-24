@@ -16,7 +16,7 @@
 
 - Igor Vicente Haubrich
 
-- Lucas Ferreira Seixas (Cryss)
+- Lucas Ferreira Seixas (-Cryss-)
 
 - Bruno Prata Dias
 
