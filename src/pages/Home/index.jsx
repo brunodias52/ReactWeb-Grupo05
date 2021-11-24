@@ -10,7 +10,7 @@ const MyHome = () => {
         <h1>Meus produtos</h1>
         <h2>Meus produtos</h2>
         <h3>Nossos produtos</h3>
-        <h1>Meus produtos</h1>
+        <h2>Meus produtos</h2>
         </>
     )
 }
