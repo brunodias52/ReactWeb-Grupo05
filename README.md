@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-# ReactWeb-Grupo05 #####
-=======
-# ReactWeb-Grupo05 # 
 
->>>>>>> 777068ba4fe538d7f5c91f764b68338591692ffa
+# ReactWeb-Grupo05 #####
+
 
 <span>
   <img src="https://img.shields.io/static/v1?label=React&message=ReactJS&color=blue&style=for-the-badge&logo=React"/>  
@@ -29,11 +26,5 @@
 - Leandro De Almeida Camargo
 
 - Luis Felipe Saldanha Mourão De Souza
-<<<<<<< HEAD
-- Luis Felipe Saldanha Mourão De Souza (Felipe Luis)
-=======
 
---------------------------------------------------------------------
->>>>>>> 777068ba4fe538d7f5c91f764b68338591692ffa
-   
    
