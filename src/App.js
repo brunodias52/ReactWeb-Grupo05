@@ -6,7 +6,7 @@ function App() {
     <>
       <Routes/>
       <h1>Hello World</h1>
-      
+      <h2>Teste2 </h2>
        <h2>Hello World</h2>
     </>
   )
