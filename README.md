@@ -11,7 +11,7 @@
 ### 📅 Data final para entrega:  26/11/2021 23:59h.
   
 ## Desenvolvedores 💻
-- Guilherme Dideco Antunes Do Valle - (Facilitador)
+- Guilherme Dideco Antunes Do Valle - (facilitador)
 
 - Igor Vicente Haubrich
 
