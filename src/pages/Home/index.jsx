@@ -8,6 +8,7 @@ const MyHome = () => {
       <>
         <Header />
         <h1>Meus produtos</h1>
+        <h1>Categoria</h1>
         </>
     )
 }
