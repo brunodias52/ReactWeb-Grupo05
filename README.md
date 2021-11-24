@@ -24,6 +24,6 @@
 
 - Leandro De Almeida Camargo
 
-- Luis Felipe Saldanha Mourão De Souza (Felipe Luis)
+- Luis Felipe Saldanha Mourão De Souza
    
    
