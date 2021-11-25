@@ -24,8 +24,8 @@ export const FooterBox = styled.div`
     font-size: 24px;
     color: inherit;
     border: 1px solid #ccc;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     line-height: 38px;
     display: inline-block;
     text-align: center;
@@ -35,7 +35,7 @@ export const FooterBox = styled.div`
 }
 
 .footer .social a:hover{
-    opacity: .9;
+    opacity: 100;
 }
 
 .footer ul{
