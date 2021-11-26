@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import Pedidos from './pages/Pedidos'
+import Pedidos from './components/Pedidos'
 
 function Pesquisas() {
     const [pedido,setPedido] = useState();

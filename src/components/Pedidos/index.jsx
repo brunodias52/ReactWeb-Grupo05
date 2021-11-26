@@ -34,8 +34,11 @@ function Pedidos(props) {
             <label>
                 Faça seu Pedido
             </label>
-           
-            <input id="input-pesquisa" type="text" />
+
+            <div className="barra-pesquisa">
+            <input id="input-pesquisa" type="text"/>
+            </div>
+            
             <div className="div-pesquisar">
             <button onClick={handleSubmit}>Pesquisar</button>
             </div>
