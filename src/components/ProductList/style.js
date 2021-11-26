@@ -13,17 +13,19 @@ export const CardContainer = styled.div `
         font-family: 'Inter', sans-serif;
         flex-wrap: wrap;
         gap: 30px;
+        padding-left: 12rem;
+
         .card-container{
             width: 30rem;
             height: 30rem;
             border: 1px solid black;
+            border-radius: 20px;
             box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
             transition-duration: .5s;
         }
         img{
             width:80%;
             height: 65%;
-            border-radius: 5px;
         }
         .product-name{
             font-size: 30px;
