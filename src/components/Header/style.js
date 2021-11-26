@@ -2,15 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderBox = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-body {
-  background-color: white;
-  margin: auto;
-  padding: 0px;
-  overflow-x: hidden;
-  background-repeat: repeat;
-  font-family: 'Inter', sans-serif;
-  display: grid;
-}
+
 .container {
   width: 100%;
 	padding-right:15px;

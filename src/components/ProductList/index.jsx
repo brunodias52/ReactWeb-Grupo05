@@ -1,7 +1,7 @@
 import React from 'react';
 
 import axios from 'axios';
-import {CardContainer} from "./style"
+import { CardContainer } from "./style"
 
 
 export default class ProductList extends React.Component {
@@ -14,24 +14,40 @@ export default class ProductList extends React.Component {
       .then(res => {
         const products = res.data;
         this.setState({ products });
+
       })
   }
 
   render() {
     return (
 
-          <CardContainer>
-          <div className="product-container">
-              <div className="product-name">
-        { this.state.products.map(product => <span>{product.nome}</span>)}
-              </div>
-        { this.state.products.map(product => <span>{product.descricao}</span>)}
-        { this.state.products.map(product => <span>{product.qtdEstoque}</span>)}
-        { this.state.products.map(product => <span>{product.valor}</span>)}
-        { this.state.products.map(product => <img src={product.fotoLink}/>)}
-         </div>
-         </CardContainer>
+      <CardContainer>
+        <div className="product-container">
+        {this.state.products.map(product => {
 
+          return (
+
+            <div className="card-container">
+
+              <img src={product.fotoLink} />
+
+              <div className="product-name">{product.nome}</div>
+
+              <div className="product-desc"> {product.descricao} </div>
+
+              {/* <div className="product-estoque">{product.qtdEstoque} </div> */}
+
+              <div className="product-price"> R${product.valor} </div>
+
+              <button className="add-cart-button"> Adicionar ao Carrinho </button>
+
+            </div>
+          
+          );
+        })}
+        </div>
+
+      </CardContainer>
 
     )
   }

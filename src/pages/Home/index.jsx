@@ -7,14 +7,13 @@ import "../../../src/Global.css"
 import Footer from "../../components/Footer";
 
 const MyHome = () => {
-    return (
-      <>
-        <Header/>
-        <ProductList/>
-        <h1>oi</h1>
-        <Footer/>
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <ProductList />
+      <Footer />
+    </>
+  )
 }
 
 export default MyHome;
