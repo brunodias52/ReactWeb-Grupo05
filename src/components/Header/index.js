@@ -62,6 +62,8 @@ const Header = () => {
                                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/QuemSomos`}> Quem Somos </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contato`}> Contato </NavLink> </li>
+                                        <li className="menu-item " ><NavLink onClick={toggleClass}
+                                        activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
 
                                     </ul>
                                </nav>     
