@@ -1,16 +1,31 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { Redirect } from "react-router-dom";
 
-import Header from '../../components/Header'
+import { AuthContextData } from '../../context/AuthContext';
+import Formulario from '../../components/Formulario';
 
-const Login = () => {
+function Login() {
+    const { userData, userAuth, setUserData, handleLogin } = 
+    useContext(AuthContextData);
+
+    function handleSetUserData(key, value){
+        setUserData({
+            ...userData,
+            [key]: value,
+        });
+    }
+
+    if (userAuth.authenticated) {
+        return <Redirect to="/" />;
+    }
+
     return (
-        <>
-        <div className=".components">
-            <Header />
-            <h1>Login</h1>
-        </div>
-        </>
-    )
+        <Formulario
+            userData={userData}
+            setDataUser={handleSetUserData}
+            handleLogin={handleLogin}
+        />
+    );
 }
 
 export default Login;
