@@ -1,4 +1,6 @@
-# ReactWeb-Grupo05 #
+
+# ReactWeb-Grupo05 #####
+
 
 <span>
   <img src="https://img.shields.io/static/v1?label=React&message=ReactJS&color=blue&style=for-the-badge&logo=React"/>  
@@ -8,10 +10,10 @@
   <img src="https://img.shields.io/static/v1?label=Javascript&message=Javascript&color=yellow&style=for-the-badge&logo=Javascript"/> 
 </span>
 
-### 📅 Data final para entrega:  26/11/2021 23:59h.
+## 📅 Data final para entrega:  26/11/2021 23:59h.
   
 ## Desenvolvedores 💻
-- Guilherme Dideco Antunes Do Valle - (facilitador)
+- Guilherme Dideco Antunes Do Valle - (Facilitador)
 
 - Igor Vicente Haubrich
 
@@ -21,8 +23,8 @@
 
 - Lucas Coelho Paulino
 
-- Leandro De Almeida Camargo
+- Leandro De Almeida Camargo (Petrolesk)
 
 - Luis Felipe Saldanha Mourão De Souza
-   
+
    
