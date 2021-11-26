@@ -5,7 +5,7 @@ import { AuthContextData } from "../../context/AuthContext";
 import { ContainerCard } from "./style";
 
 function Card({user, produto, detalhes}) {
-    const {id, email, primeiro_nome, ultimo_nome} = user;
+    const {id, email} = user;
     const {id, tipo_produto} = produto;
     const {userAuth} = useContext(AuthContextData);
 

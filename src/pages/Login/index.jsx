@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Redirect } from "react-router-dom";
 
 import { AuthContextData } from '../../context/AuthContext';
@@ -7,6 +7,7 @@ import Formulario from '../../components/Formulario';
 function Login() {
     const { userData, userAuth, setUserData, handleLogin } = 
     useContext(AuthContextData);
+    console.log(userData);
 
     function handleSetUserData(key, value){
         setUserData({

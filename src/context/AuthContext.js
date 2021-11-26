@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState, useEffect } from "react";
 import api from "../Service/api";
 import axios from 'axios';
 
@@ -14,16 +14,30 @@ const userDataModel = {
     senha: "",
 };
 
-function AuthContext(props) {
+function AuthContext(props) { /*precisa englobar toda minha aplicação.*/
     const [userAuth, setUserAuth] = useState(userAuthData);
     const [userData, setUserData] = useState(userDataModel);
+    const [list, setList] = useState([
+        {
+            email: "teste@teste.com",
+            senha: "1234"
+        },
+        {
+            email: "outroteste@gmail.com",
+            senha: "98765"
+        },
+        {
+            email: "usuariologado@bol.com.br",
+            senha: "12345"
+        }
+    ]);
     const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
+    console.log(userData);
+    useEffect(() => { /*dispara assim que a página for carregada.*/
         const token = JSON.parse(localStorage.getItem("token"));
         const role = JSON.parse(localStorage.getItem("role"));
-        if(token && role){
-            axios.defaults.headers.common = {'Authorization': `Bearer ${token}`};
+        if (token && role) {
+            axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` };
             setUserAuth({
                 authenticated: true,
                 role: role,
@@ -38,42 +52,36 @@ function AuthContext(props) {
         localStorage.removeItem("token");
     }
 
-    if(loading) {
+    if (loading) {
         return <h1>Loading...</h1>;
     }
 
     function handleLogin(e, userData) {
         e.preventDefault();
-        api
-        .post("/login", userData)
-        .then((response) => {
-            if (response.status === 200) {
-                const {token} = response.data;
-                localStorage.setItem("token", JSON.stringify(token));
-                localStorage.setItem("role", JSON.stringify(userData.senha));
-                axios.defaults.headers.common = {'Authorization': `Bearer ${token}`};
+        const objetoLocalizado = list.filter(user => user.email === userData.email)
+        if (objetoLocalizado[0]) {
+            if (objetoLocalizado[0].senha === userData.senha){
                 setUserAuth({
                     authenticated: true,
-                    role: userData.senha,
-                });
+                    role: "admin"
+                })
+                alert("Usuário logado com sucesso!")
             }
-            if (response.status === 400) {
-                alert(
-                    "400 - BAD REQUEST - Verifique se você preencheu corretamente os campos"
-                )
+            else{
+                alert("Senha incorreta!")
             }
-        })
-        .catch((err) => {
-            alert(`${err.message} - Tente mais tarde`);
-        });
+            
+        } else {
+            alert("Usuário não localizado!")
+        }
     }
 
     return (
         <AuthContextData.Provider
-        value={{ userData, userAuth, setUserData, logout, handleLogin, loading}}>
+            value={{ userData, userAuth, setUserData, logout, handleLogin, loading }}>
             {props.children}
         </AuthContextData.Provider>
-    )   
+    );
 }
 
 export default AuthContext;
