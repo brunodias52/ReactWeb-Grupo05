@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 
 import QuemSomos from "./pages/QuemSomos";
 import Contato from "./pages/Contato";
+import Login from "./pages/Login";
 
 
 function Routes() {
@@ -17,7 +18,7 @@ function Routes() {
 
         <Route path="/QuemSomos" exact component={QuemSomos} />
         <Route path="/Contato" exact component={Contato} />
-
+        <Route path="/Login" exact component={Login} />
       </Switch>
     </BrowserRouter>
   );
