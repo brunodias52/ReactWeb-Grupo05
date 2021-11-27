@@ -1,0 +1,23 @@
+/* import styled from 'styled-components';
+
+export const BarraPesquisa = styled.div */
+
+.pagpesquisa{
+    width: 30%;
+    margin-left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.div-pesquisar{ 
+    margin-left: 15rem;
+}  
+
+#input-pesquisa{
+
+    width: 50rem;
+
+}

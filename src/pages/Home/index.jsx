@@ -1,18 +1,27 @@
 import React from "react";
+
 import Header from "../../components/Header";
+
 import Cadastro from "../../components/Cadastro"
+
+import ProductList from "../../components/ProductList";
+
 import "../../../src/Global.css"
+import Footer from "../../components/Footer";
+
+import Pedido from "../../components/Pedidos"
 
 const MyHome = () => {
+
     return (
       <>
-        <Header />
-        <Cadastro />
-        <h1>Meus produtos</h1>
-        <h2>Meus produtos</h2>
-        <h3>Nossos produtos</h3>
-        <h2>Meus produtos</h2>
 
+        <Header/>
+        <Pedido/>
+        <ProductList />
+        <h1>oi</h1>
+        <Footer/>
+        
         </>
     )
 }
