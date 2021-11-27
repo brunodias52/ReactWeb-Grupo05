@@ -9,6 +9,7 @@ const Header = () => {
             <div>
                 <a href="#">Carrinho</a>
                 <a href="#">#Login#</a>
+                
             </div>
         </HeaderBox>
     )
