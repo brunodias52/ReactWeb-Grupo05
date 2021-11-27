@@ -2,8 +2,6 @@ import React from "react";
 
 import Header from "../../components/Header";
 
-import Cadastro from "../../components/Cadastro"
-
 import ProductList from "../../components/ProductList";
 
 import "../../../src/Global.css"

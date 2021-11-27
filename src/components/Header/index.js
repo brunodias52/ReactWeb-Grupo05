@@ -8,20 +8,6 @@ import { HeaderBox } from './style';
 
 const Header = () => {
 
-    return (
-        <HeaderBox>
-            <div>
-                <a href="#">Meu Logo</a>
-            </div>
-            <div>
-                <a href="#">Carrinho</a>
-                <a href="#">#Login#</a>
-                
-            </div>
-        </HeaderBox>
-    )
-}
-
     const [isMenu, setisMenu] = useState(false);
 
     /* Menu drop-down inicia fechado */
@@ -76,6 +62,7 @@ const Header = () => {
                                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/QuemSomos`}> Quem Somos </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contato`}> Contato </NavLink> </li>
+                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Cadastro`}> Cadastro </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/#'}> <FiShoppingCart/> </NavLink></li>
 
@@ -87,6 +74,6 @@ const Header = () => {
                 </header>
             </HeaderBox>
         )
-    
+    }   
 
 export default Header;

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import api from "../../Service/api";
+import {ContainerRegistro} from "./style"
+import Titulo from "../../components/Titulo"
 
 const userDataModel = {
     cpf: "",
@@ -27,9 +30,20 @@ function Cadastro() {
             [key]: value,
         });
     }
+    function handleSetUserDataEndereco(key, value) {
+        setUserData({
+            ...userData,
+            endereco:{
+                ...userData.endereco,
+                [key]: value 
+            }
+            
+        });
+    }
+    console.log(userData)
     function cadastrar(e) {
         e.preventDefault();
-        api.post(userData)
+        api.post("/cliente", userData)
             .then((response) => {
                 if (response.status === 201) {
                     const { data } = response
@@ -44,7 +58,7 @@ function Cadastro() {
 
     return (
 
-        <ContainerRegistro onSubmit={(e) => cadastrar(e)}>
+        <form onSubmit={(e) => cadastrar(e)}>
             <Titulo>Registro de Usuário</Titulo>
             <label>CPF:</label>
             <input
@@ -68,69 +82,57 @@ function Cadastro() {
                 onChange={(e) => handleSetUserData("email", e.target.value)}
             />
             <label>Endereco</label>
-            <input
-                type="text"
-                endereco="endereco"
-                value={userData.endereco}
-                onChange={(e) => handleSetUserData("endereco", e.target.value)}
-            />
+            
             <label>Bairro</label>
             <input
                 type="bairro"
                 bairro="bairro"
-                value={userData.bairro}
-                onChange={(e) => handleSetUserData("bairro", e.target.value)}
+                value={userData.endereco.bairro}
+                onChange={(e) => handleSetUserDataEndereco("bairro", e.target.value)}
             />
             <label>CEP</label>
             <input
                 type="number"
                 cep="cep"
-                value={userData.cep}
-                onChange={(e) => handleSetUserData("cep", e.target.value)}
+                value={userData.endereco.cep}
+                onChange={(e) => handleSetUserDataEndereco("cep", e.target.value)}
             />
             <label>Cidade</label>
             <input
                 type="text"
                 cidade="cidade"
-                value={userData.cidade}
-                onChange={(e) => handleSetUserData("cidade", e.target.value)}
+                value={userData.endereco.cidade}
+                onChange={(e) => handleSetUserDataEndereco("cidade", e.target.value)}
             />
             <label>Complemento</label>
             <input
                 type="text"
                 complemento="complemento"
-                value={userData.complemento}
-                onChange={(e) => handleSetUserData("complemento", e.target.value)}
+                value={userData.endereco.complemento}
+                onChange={(e) => handleSetUserDataEndereco("complemento", e.target.value)}
             />
             <label>Estado</label>
             <input
                 type="text"
                 estado="estado"
-                value={userData.estado}
-                onChange={(e) => handleSetUserData("estado", e.target.value)}
+                value={userData.endereco.estado}
+                onChange={(e) => handleSetUserDataEndereco("estado", e.target.value)}
             />
             <label>Numero</label>
             <input
                 type="number"
                 numero="numero"
-                value={userData.numero}
-                onChange={(e) => handleSetUserData("numero", e.target.value)}
+                value={userData.endereco.numero}
+                onChange={(e) => handleSetUserDataEndereco("numero", e.target.value)}
             />
             <label>Rua</label>
             <input
                 type="text"
                 rua="rua"
-                value={userData.rua}
-                onChange={(e) => handleSetUserData("rua", e.target.value)}
+                value={userData.endereco.rua}
+                onChange={(e) => handleSetUserDataEndereco("rua", e.target.value)}
             />
 
-            <label>Id:</label>
-            <input
-                type="text"
-                id="id"
-                value={userData.id}
-                onChange={(e) => handleSetUserData("id", e.target.value)}
-            />
             <label>Nome:</label>
             <input
                 type="text"
@@ -153,9 +155,7 @@ function Cadastro() {
                 value={userData.senha1}
                 onChange={(e) => handleSetUserData("senha1", e.target.value)}
             />
-
-
-        </ContainerRegistro>
+        </form>
 
     );
 }
