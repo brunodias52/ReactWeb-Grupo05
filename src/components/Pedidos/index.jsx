@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import API from "../../Service/api.js";
-import "./style.css"
+import {BarraPesquisa} from "./style"
 
-function Pedidos(props) {
+function Pedidos() {
 
     const [Produtos,setProdutos] = useState([])
     const [ProdutosVisiveis,setProdutosVisiveis] = useState([])
@@ -29,10 +29,10 @@ function Pedidos(props) {
     }, [])
 
     return (
-        <>
+        <BarraPesquisa>
             <div className="pagpesquisa">
             <label>
-                Faça seu Pedido
+                Procure um produto
             </label>
 
             <div className="barra-pesquisa">
@@ -48,7 +48,7 @@ function Pedidos(props) {
             })           
             }</div>
             </div>
-        </>
+        </BarraPesquisa>
     )
 }
 

@@ -1,8 +1,9 @@
-/* import styled from 'styled-components';
+import styled from 'styled-components';
 
-export const BarraPesquisa = styled.div */
+export const BarraPesquisa = styled.div`
 
 .pagpesquisa{
+    padding-top: 2rem;
     width: 30%;
     margin-left: 35%;
     display: flex;
@@ -10,14 +11,17 @@ export const BarraPesquisa = styled.div */
     align-items: center;
     flex-direction: column;
 
+    label{
+        font-size: 30px;
+    }
 }
 
 .div-pesquisar{ 
-    margin-left: 15rem;
+    margin: auto;
 }  
 
 #input-pesquisa{
-
+    height: 2rem;
     width: 50rem;
-
 }
+`

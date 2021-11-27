@@ -15,10 +15,8 @@ const MyHome = () => {
         <Header/>
         <Pedido/>
         <ProductList />
-        <h1>oi</h1>
-        <Footer/>
-        
-        </>
+        <Footer/>  
+      </>
     )
 }
 
