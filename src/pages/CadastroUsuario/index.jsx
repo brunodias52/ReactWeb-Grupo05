@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../../Service/api";
-import {ContainerRegistro} from "./style"
+import {Form} from "./style"
 import Titulo from "../../components/Titulo"
 
 const userDataModel = {
@@ -20,7 +20,7 @@ const userDataModel = {
     usuario: ""
 }
 
-function Cadastro() {
+function CadastroUsuario() {
     const [userData, setUserData] = useState(userDataModel);
 
 
@@ -58,7 +58,7 @@ function Cadastro() {
 
     return (
 
-        <form onSubmit={(e) => cadastrar(e)}>
+        <Form onSubmit={(e) => cadastrar(e)}>
             <Titulo>Registro de Usuário</Titulo>
             <label>CPF:</label>
             <input
@@ -148,15 +148,9 @@ function Cadastro() {
                 onChange={(e) => handleSetUserData("usuario", e.target.value)}
             />
 
-            <label>senha</label>
-            <input
-                type="password"
-                senha="senha1"
-                value={userData.senha1}
-                onChange={(e) => handleSetUserData("senha1", e.target.value)}
-            />
-        </form>
+            <button type="submit">Cadastrar Usuário</button>
+        </Form>
 
     );
 }
-export default Cadastro;
+export default CadastroUsuario;
