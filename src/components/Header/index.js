@@ -62,6 +62,7 @@ const Header = () => {
                                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/QuemSomos`}> Quem Somos </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contato`}> Contato </NavLink> </li>
+                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Cadastro`}> Cadastro </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/#'}> <FiShoppingCart/> </NavLink></li>
 
@@ -73,6 +74,6 @@ const Header = () => {
                 </header>
             </HeaderBox>
         )
-    }
+    }   
 
 export default Header;
