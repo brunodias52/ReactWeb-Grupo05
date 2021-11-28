@@ -13,11 +13,13 @@ export const BarraPesquisa = styled.div */
 }
 
 .div-pesquisar{ 
-    margin-left: 15rem;
+    margin-left: 54rem;
+   
 }  
 
 #input-pesquisa{
 
     width: 50rem;
+    height: 1.5rem;
 
 }
