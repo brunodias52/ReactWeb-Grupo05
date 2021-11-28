@@ -64,7 +64,7 @@ const Header = () => {
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contato`}> Contato </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Cadastro`}> Cadastro </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
-                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/#'}> <FiShoppingCart/> </NavLink></li>
+                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/ShoppingCart'}> <FiShoppingCart/> </NavLink></li>
 
                                     </ul>
                                </nav>     
