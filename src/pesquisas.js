@@ -8,8 +8,7 @@ function Pesquisas() {
       setpedido(e.target.value);  
     }
 
-    return(
-        
+    return(   
       <Pedidos/>
     );
   }
