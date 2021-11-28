@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import axios from "axios";
 
 import Header from "../../components/Header";
-
 import ProductList from "../../components/ProductList";
 
 import "../../../src/Global.css"
@@ -46,4 +45,4 @@ const MyHome = () => {
   )
 }
 
-export default MyHome
+export default MyHome;
