@@ -20,7 +20,7 @@ const userDataModel = {
     usuario: ""
 }
 
-function Cadastro() {
+function CadastroUsuario() {
     const [userData, setUserData] = useState(userDataModel);
 
 
@@ -148,15 +148,9 @@ function Cadastro() {
                 onChange={(e) => handleSetUserData("usuario", e.target.value)}
             />
 
-            <label>senha</label>
-            <input
-                type="password"
-                senha="senha1"
-                value={userData.senha1}
-                onChange={(e) => handleSetUserData("senha1", e.target.value)}
-            />
+            
         </form>
 
     );
 }
-export default Cadastro;
+export default CadastroUsuario;
