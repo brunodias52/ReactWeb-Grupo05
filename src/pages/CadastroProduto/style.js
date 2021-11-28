@@ -9,18 +9,18 @@ export const ContainerForm = styled.div`
 
 export const Form = styled.form`
     margin: auto;
-    margin-top: 10%;
+    margin-top: 20%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #fff;
+    border: 1px solid black;
     border-radius: 5px;
-    width: 30%;
+    width: 60%;
     min-width: 20rem;
     padding: 2rem;
     gap: 0.5rem;
     label{
         text-align: left;
-        color: #fff;
+        color: black;
     }
     input{
         font-size: 1.3rem;
@@ -30,10 +30,10 @@ export const Form = styled.form`
         }
     }
     p{
-        color: #fff;
+        color: green;
     }
     span{
-        color: #0089FE;
+        color: blue;
         cursor: pointer;
     }
 `

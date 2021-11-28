@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "../../Service/api";
-/*TODO import {ContainerRegistro} from "./style"       rever o edereco*/
-import Titulo from "../../components/Titulo"
+import {Form} from "./style";       
+import Titulo from "../../components/Titulo";
 
 const productDataModel = {
     "dataFabricacao": "",/* TODO temos de rever este metodo para completar automatico*/
@@ -41,7 +41,7 @@ function CadastroProduto() {
 
     return (
 
-        <form onSubmit={(e) => cadastrar(e)}>
+        <Form onSubmit={(e) => cadastrar(e)}>
             <Titulo>Cadastro de Produtos</Titulo>
             <label>Data e Hora Registro:</label>
             <input
@@ -92,8 +92,8 @@ function CadastroProduto() {
                 value={productData.valor}/* TODO verificar trecho*/
                 onChange={(e) => handleSetProductData("valor", e.target.value)}
             />
-            
-            </form>
+            <button type="submit">Cadastrar Produto</button>
+            </Form>
     )
     }
     export default CadastroProduto;
