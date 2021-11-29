@@ -1,30 +1,33 @@
-import React from 'react';
-import { CardContainer } from "./style"
+import { CardContainer } from "./style";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 
+function ProductList({ products, handleAddItem }) {
 
-export default class ProductList extends React.Component {
-  render() {
-    return (
+  
+  console.log(products)
+  return (
 
-      <CardContainer>
-        <div className="product-container">
-        {this.props.products.map(product => {
+    <CardContainer>
+      <div className="product-container">
+      {products.map(product => {
 
-          return (
-            <div className="card-container" key={product.id}>
-              <img src={product.fotoLink} />
-              <div className="product-name">{product.nome}</div>
-              <div className="product-desc"> {product.descricao} </div>
-              {/* <div className="product-estoque">{product.qtdEstoque} </div> */}
-              <div className="product-price"> R${product.valor} </div>
-              <button className="add-cart-button"> Adicionar ao Carrinho </button>
-            </div>
-          );
-        })}
-        </div>
+        return (
+          <div className="card-container" key={product.id}>
+            <img src={product.fotoLink} />
+            <div className="product-name">{product.nome}</div>
+            <div className="product-desc"> {product.descricao} </div>
+            {/* <div className="product-estoque">{product.qtdEstoque} </div> */}
+            <div className="product-price"> R${product.valor} </div>
+            <button className="add-cart-button" onClick={() => handleAddItem (product)}> Adicionar ao Carrinho </button>
+          </div>
+        );
+      })}
+      </div>
 
-      </CardContainer>
+    </CardContainer>
 
-    )
-  }
-}
+  )
+};
+  export default ProductList;

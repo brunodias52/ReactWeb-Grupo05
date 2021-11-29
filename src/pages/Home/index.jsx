@@ -1,49 +1,65 @@
 import React, { useEffect } from "react";
-import axios from "axios";
-
-import Header from "../../components/Header";
-
-import ProductList from "../../components/ProductList";
-
-import "../../../src/Global.css"
-import Footer from "../../components/Footer";
-
-import Pedido from "../../components/Pedidos"
 import { useState } from "react";
+
+
+import api from "../../../src/Service/api.js"
+import ProductList from "../../components/ProductList";
+import "../../../src/Global.css"
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Pedido from "../../components/Pedidos"
+import CartItems from "../../components/CartsItems";
+import ShoppingCard from "../ShoppingCart";
 
 const MyHome = () => {
   const [search, setSearch] = useState("")
-  const [products, setProducts] = useState([])
   const [produtosfiltrados, setProdutosFiltrados] = useState([])
-  console.log(products)
+  const [cart, setCart] = useState([])
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
-    axios.get(`https://ecommerce-residencia.herokuapp.com/produto`)
+    api.get(`/produto`)
       .then(res => {
         const products = res.data;
-        console.log(res)
         setProducts(products)
       })
   }, [])
 
-  function handleSearch() {
+  
+    console.log(cart)
+    function handleAddItem(product){
+      console.log(product)
+      alert(product);
+      setCart([...cart, product]);
+      };
+
+  function handleRemoverItem(productID){
+    console.log(productID)
+    const filteredCart = cart.filter( productID => cart.indexOf(productID) !== productID);
+    setCart(filteredCart);
+  }
+  
+
+function handleSearch() {
     const filtrados = products.filter(p => p.nome.toLowerCase().includes(search.toLowerCase()))
     setProdutosFiltrados(filtrados)
-  }
+  } 
+  
   console.log(produtosfiltrados)
   return (
     <>
-      <Header />
-      <Pedido search={search} setSearch={setSearch} handleSearch={handleSearch} />
+        <Header />
+        <Pedido search={search} setSearch={setSearch} handleSearch={handleSearch} />
       {produtosfiltrados.length === 0 ?
-        <ProductList search={search} products={products} />
+        <ProductList search={search} products={products} handleAddItem={handleAddItem}/>
         :
-        <ProductList search={search} products={produtosfiltrados} />
+        <ProductList search={search} products={produtosfiltrados} handleAddItem={handleAddItem}/>
       }
-      <h1>oi</h1>
+      <h1>-----------------------------Carrinho---------------------</h1>
+      <CartItems cart={cart} handleRemoverItem={handleRemoverItem}/>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default MyHome
+export default MyHome;

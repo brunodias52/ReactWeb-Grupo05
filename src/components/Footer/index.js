@@ -1,5 +1,5 @@
 import { FooterBox } from "./style"
-
+import {NavLink} from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,6 +9,7 @@ const Footer = () => {
             <footer className="main-footer">
                 <section className="footer">
                     <div className="social">
+                    
                         <a href="#"><i className="fab fa-instagram"> <FaInstagram /> </i></a>
                         <a href="#"><i className="fab fa-facebook"> <FaFacebook /> </i></a>
                         <a href="#"><i className="fab fa-twitter"> <FaTwitter /> </i></a>
@@ -19,10 +20,10 @@ const Footer = () => {
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#">Contato</a>
+                            <NavLink to={`/Contato`}> Contato </NavLink> 
                         </li>
                         <li>
-                            <a href="#">Quem somos</a>
+                            <NavLink to={`/QuemSomos`}> Quem Somos </NavLink> 
                         </li>
                     </ul>
                     <p className="copyright">
