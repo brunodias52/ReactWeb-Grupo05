@@ -14,10 +14,10 @@ export const CardContainer = styled.div `
         font-family: 'Inter', sans-serif;
         flex-wrap: wrap;
         gap: 30px;
-        padding-left: 12rem;
+        padding-left: 8rem;
         .card-container{
-            width: 30rem;
-            height: 30rem;
+            width: 25rem;
+            height: 25rem;
             border: 1px solid black;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgb(0 0 0 / 50%);

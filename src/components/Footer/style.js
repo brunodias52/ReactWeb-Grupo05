@@ -3,15 +3,14 @@ import styled from "styled-components";
 export const FooterBox = styled.div`
 
 .main-footer{
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
-    background-color: pink; 
+
 }
 
-.footer {
+footer {
     padding: 40px 0;
-    background-color: #fff;
+    background-color: #48B8E5;
 }
 
 .footer .social{
@@ -22,7 +21,6 @@ export const FooterBox = styled.div`
 
 .footer .social a{
     font-size: 24px;
-    color: inherit;
     border: 1px solid #ccc;
     width: 35px;
     height: 35px;
@@ -32,6 +30,8 @@ export const FooterBox = styled.div`
     border-radius: 50%;
     margin: 0 8px;
     opacity: .75;
+    text-decoration: none;
+    color: white;
 }
 
 .footer .social a:hover{
@@ -46,6 +46,7 @@ export const FooterBox = styled.div`
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
+    color: white;
 }
 
 .footer ul li a{
@@ -68,7 +69,7 @@ export const FooterBox = styled.div`
     margin-top: 15px;
     text-align: center;
     font-size: 13px;
-    color: #aaaaaa;
+    color: grey;
 
 }
 `

@@ -1,21 +1,14 @@
 import { Axios } from "axios";
 import React, { useEffect, useState } from "react";
 import API from "../../Service/api.js";
-import "./style.css"
+import {BarraPesquisa} from "./style.js"
 
 
 function Pedidos(props) {
-   /*  function handleSubmit() {
-        let valor = document.querySelector("#input-pesquisa").value
-        let prodEncontrados = Produtos.map(prodEncontrados => {
-
-            return prodEncontrados.value.includes(valor)
-        });
-        setProdutosVisiveis(prodEncontrados)
-    } */
 
     return (
         <>
+            <BarraPesquisa>
             <div className="pagpesquisa">
                 <input id="input-pesquisa" 
                     type="text" 
@@ -23,12 +16,13 @@ function Pedidos(props) {
                     value={props.search} 
                     onChange={(e) => props.setSearch(e.target.value)} 
                 />
-
+    
                 <div className="div-pesquisar">
-                    <button onClick={props.handleSearch}>Pesquisar</button>
+                <button onClick={props.handleSearch}>Pesquisar</button>
                 </div>
 
             </div>
+            </BarraPesquisa>
         </>
     )
 }   

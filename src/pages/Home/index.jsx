@@ -1,16 +1,12 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Header from "../../components/Header";
-import axios from "axios";
 
+import api from "../../../src/Service/api.js"
 import ProductList from "../../components/ProductList";
-
-
 import "../../../src/Global.css"
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-
 import Pedido from "../../components/Pedidos"
-
 import CartItems from "../../components/CartsItems";
 import ShoppingCard from "../ShoppingCart";
 
@@ -21,13 +17,10 @@ const MyHome = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    axios.get(`https://ecommerce-residencia.herokuapp.com/produto`)
+    api.get(`/produto`)
       .then(res => {
         const products = res.data;
         setProducts(products)
-       
-  
-        
       })
   }, [])
 
