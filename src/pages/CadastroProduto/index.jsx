@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import api from "../../Service/api";
-import {Form} from "./style";       
+import {Form, ContainerForm} from "./style";       
 import Titulo from "../../components/Titulo";
-
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+ 
 const productDataModel = {
     "dataFabricacao": "",/* TODO temos de rever este metodo para completar automatico*/
     "descricao":"",
@@ -22,7 +24,7 @@ function CadastroProduto() {
             [key]: value,
         });
     }
-    
+ 
     console.log(productData)
     function cadastrar(e) {
         e.preventDefault();
@@ -31,16 +33,18 @@ function CadastroProduto() {
                 if (response.status === 201) {
                     const { data } = response
                     alert(`Produto Cadastrado`)
-
+ 
                     setProductData(productDataModel)
                 }
             }).catch((error) => {
                 alert(`${error.message} - Produto não cadastrado`)
             })
     }
-
+ 
     return (
-
+        <>
+        <Header/>
+        <ContainerForm>
         <Form onSubmit={(e) => cadastrar(e)}>
             <Titulo>Cadastro de Produtos</Titulo>
             <label>Data e Hora Registro:</label>
@@ -94,6 +98,9 @@ function CadastroProduto() {
             />
             <button type="submit">Cadastrar Produto</button>
             </Form>
+            </ContainerForm>
+            <Footer/>
+            </>
     )
     }
     export default CadastroProduto;

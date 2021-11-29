@@ -1,15 +1,17 @@
 import styled from "styled-components";
-
+ 
 export const ContainerForm = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+ 
 `
-
+ 
 export const Form = styled.form`
     margin: auto;
-    margin-top: 20%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -35,5 +37,12 @@ export const Form = styled.form`
     span{
         color: blue;
         cursor: pointer;
+    }
+    button{
+        width: 10rem;
+        text-align: center;
+        margin: auto;
+        height: 2rem;
+        border-radius: 5px;
     }
 `

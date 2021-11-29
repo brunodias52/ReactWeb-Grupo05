@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import api from "../../Service/api";
-import {Form} from "./style"
+import {Form, ContainerForm} from "./style"
 import Titulo from "../../components/Titulo"
-
+import Header from "./../../components/Header"
+import Footer from "./../../components/Footer"
+ 
 const userDataModel = {
     cpf: "",
     dataNascimento: "",
@@ -19,11 +21,11 @@ const userDataModel = {
     nome: "",
     usuario: ""
 }
-
+ 
 function CadastroUsuario() {
     const [userData, setUserData] = useState(userDataModel);
-
-
+ 
+ 
     function handleSetUserData(key, value) {
         setUserData({
             ...userData,
@@ -37,7 +39,7 @@ function CadastroUsuario() {
                 ...userData.endereco,
                 [key]: value 
             }
-            
+ 
         });
     }
     console.log(userData)
@@ -48,16 +50,18 @@ function CadastroUsuario() {
                 if (response.status === 201) {
                     const { data } = response
                     alert(`Cadastro realizado`)
-
+ 
                     setUserData(userDataModel)
                 }
             }).catch((error) => {
                 alert(`${error.message} - Cadastro nao realizado`)
             })
     }
-
+ 
     return (
-
+        <>
+        <Header/>
+        <ContainerForm>
         <Form onSubmit={(e) => cadastrar(e)}>
             <Titulo>Registro de Usuário</Titulo>
             <label>CPF:</label>
@@ -82,7 +86,7 @@ function CadastroUsuario() {
                 onChange={(e) => handleSetUserData("email", e.target.value)}
             />
             <label>Endereco</label>
-            
+ 
             <label>Bairro</label>
             <input
                 type="bairro"
@@ -132,7 +136,7 @@ function CadastroUsuario() {
                 value={userData.endereco.rua}
                 onChange={(e) => handleSetUserDataEndereco("rua", e.target.value)}
             />
-
+ 
             <label>Nome:</label>
             <input
                 type="text"
@@ -147,10 +151,15 @@ function CadastroUsuario() {
                 value={userData.usuario}
                 onChange={(e) => handleSetUserData("usuario", e.target.value)}
             />
-
+ 
             <button type="submit">Cadastrar Usuário</button>
+ 
         </Form>
-
+        </ContainerForm>
+        <Footer/>
+ 
+        </>
+ 
     );
 }
 export default CadastroUsuario;
