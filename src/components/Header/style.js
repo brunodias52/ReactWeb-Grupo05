@@ -14,7 +14,11 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+#main-logo{
+  width: 30%;
+  height: 30%;
+  margin-left: 1rem;
+}
 .navBar .logo img {
   float: left;
   max-height: 120px;
@@ -70,9 +74,10 @@ li {
   float: left;
   border-bottom: 1px dashed lavender;
   position: relative;
+  background-color: #48B8E5;
 }
 .header__middle__logo > a > h1 {
-  color: #07a8ff;
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 33px;
@@ -94,12 +99,7 @@ li {
 }
 
 .menu-item:hover > a{
-  color: #07a8ff !important;
-}
-
-.header__middle__logo img{
-  max-width: 207px;
-  margin: 17px 0 0 0;
+  color: #2842E6 !important;
 }
 
 

@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import {FiAlignRight,FiXCircle, FiShoppingCart } from "react-icons/fi"; /* Importe de ícones do react */
 
-import logo from "../../assets/img/logo-temporario.png" /* Importe do logo */
+import logo from "../../assets/img/logo.png" /* Importe do logo */
 import { HeaderBox } from './style';
 
 
@@ -36,7 +36,7 @@ const Header = () => {
                             <div className="header__middle__logo">
                                 {/* Redireciona para o Home */}
                                 <NavLink exact activeClassName='is-active' to="/">
-                                    <img src={logo} alt="logo" /> 
+                                    <img id="main-logo" src={logo} alt="logo" /> 
                                 </NavLink>
                             </div>
 
@@ -62,19 +62,10 @@ const Header = () => {
                                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/QuemSomos`}> Quem Somos </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contato`}> Contato </NavLink> </li>
-
-                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Cadastro`}> Cadastro </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
-                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/ShoppingCart'}> <FiShoppingCart/> </NavLink></li>
-
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/CadastroUsuario`}> Cadastro Usuário </NavLink> </li>
-                                        <li className="menu-item " ><NavLink onClick={toggleClass}
-                                        activeClassName='is-active' to={`/CadastroProduto`}> Cadastro Produto </NavLink> </li>
-                                        <li className="menu-item " ><NavLink onClick={toggleClass}
-                                        activeClassName='is-active' to={'/Login'}> Login </NavLink></li>
+                                        <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/CadastroProduto`}> Cadastro Produto </NavLink> </li>
                                         <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={'/#'}> <FiShoppingCart/> </NavLink></li>
-
-
                                     </ul>
                                </nav>     
                             </div>   
