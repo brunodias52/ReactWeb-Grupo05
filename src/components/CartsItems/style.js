@@ -48,7 +48,30 @@ export const CardContainer = styled.div `
         }
         .add-cart-button:hover{
             font-size: 15px;
-            
+        }
+
+        .plus-cart-button{
+            cursor: pointer;
+            border-radius: 5px;
+            width: 1rem;
+            height: 1.5rem;
+            margin: 10px auto;
+            background-color: blue;
+        }
+        .plus-cart-button:hover{
+            font-size: 15px; 
+        }
+
+        .minus-cart-button{
+            cursor: pointer;
+            border-radius: 5px;
+            width: 1rem;
+            height: 1.5rem;
+            margin: 10px auto;
+            background-color: red;
+        }
+        .minus-cart-button:hover{
+            font-size: 15px; 
         }
     }
 `
