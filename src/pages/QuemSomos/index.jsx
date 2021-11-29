@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import { Qms } from "./style";
 import Footer from "../../components/Footer";
+import logo from "../../assets/img/delivery.jpg"
 
 const QuemSomos = () => {
     return (
@@ -17,17 +18,14 @@ const QuemSomos = () => {
 				</div>
 				<div class="content">
 					<h3>Distribuidora de produtos</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
+					<p>Somos uma equipe profissional de vendas e entregas rapidas com bastante sangue no olho para entregar seu produto o mais rápido possível. Fazemos muito mais do que apenas entregar o produto. Cuidamos da segurança, fraudes, pagamentos, produtos, de toda a burocracia para você comprar na internet de uma forma simples e segura..</p>
 					<div class="button">
-						<a href="">i</a>
+						<a href="/">Home</a>
 					</div>
 				</div>
 			</div>
 			<div class="image-section">
-				<img src="./img/abnermoveis.jpg"/>
+				<img src={logo}/>
 			</div>
 		</div>
 	</div>

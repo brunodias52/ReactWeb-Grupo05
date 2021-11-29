@@ -10,6 +10,7 @@ import Footer from "../../components/Footer";
 import Pedido from "../../components/Pedidos"
 import CartItems from "../../components/CartsItems";
 import ShoppingCard from "../ShoppingCart";
+import { CardContainer } from "./style.js";
 
 const MyHome = () => {
   const [search, setSearch] = useState("")
@@ -55,7 +56,12 @@ function handleSearch() {
         :
         <ProductList search={search} products={produtosfiltrados} handleAddItem={handleAddItem}/>
       }
-      <h1>-----------------------------Carrinho---------------------</h1>
+      <CardContainer>
+      <div className="scart">
+      ↓Carrinho↓
+      </div>
+      </CardContainer>
+      
       <CartItems cart={cart} handleRemoverItem={handleRemoverItem}/>
       <Footer />
     </>

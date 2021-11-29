@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Titulo from "../Titulo";
 import BotaoEnviar from "../Botao/BotaoEnviar";
 import { Form, ContainerForm } from "./style";
+import { NavLink } from "react-router-dom";
 
 
 function Formulario({userData, setDataUser, handleLogin}){
@@ -45,7 +46,7 @@ function Formulario({userData, setDataUser, handleLogin}){
                 {perfilLogin ? (
                     <p>
                         Cadastro não efetivado,{" "}
-                        <span onClick={handleSetPerfilLogin}>Registre-se aqui</span>
+                        <NavLink className="register" onClick={handleSetPerfilLogin} to={`/CadastroUsuario`}>Registre-se aqui</NavLink>
                     </p>
                 ) : (
                     <p>

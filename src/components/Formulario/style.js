@@ -17,6 +17,7 @@ export const Form = styled.form`
     width: 30%;
     min-width: 20rem;
     padding: 2rem;
+    margin-bottom: 11rem;
     gap: 0.5rem;
     label{
         text-align: left;
@@ -35,5 +36,11 @@ export const Form = styled.form`
     span{
         color: #0089FE;
         cursor: pointer;
+    }
+
+    .register{  
+        text-decoration: none;
+        color: purple;
+        font-size: 30px;
     }
 `

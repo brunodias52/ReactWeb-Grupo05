@@ -51,6 +51,13 @@ export const CardContainer = styled.div `
             font-size: 15px;
             
         }
+        
+        
+    }
+    .scart{
+        margin-top: 10rem;
+        text-align: center;
+        font-size:40px;
     }
 `
 
