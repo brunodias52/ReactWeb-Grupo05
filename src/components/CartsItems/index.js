@@ -3,7 +3,7 @@ import { CardContainer } from "./style";
 import ProductList from "../ProductList";
 
 
-const CartItems = ({ cart, handleRemoverItem }) => {
+const CartItems = ({ cart, handleRemoverItem, handleAdicionarQtd }) => {
     return (
 
         <CardContainer>
@@ -15,9 +15,13 @@ const CartItems = ({ cart, handleRemoverItem }) => {
                 <img src={cartItem.fotoLink} />
                 <div className="product-name">{cartItem.nome}</div>
                 <div className="product-desc"> {cartItem.descricao} </div>
-                {/* <div className="product-estoque">{product.qtdEstoque} </div> */}
+                {<div className="product-estoque">{cartItem.qtdEstoque} </div> }
                 <div className="product-price"> R${cartItem.valor} </div>
-                <button className="add-cart-button" onClick={() => handleRemoverItem (cartItem)}> Remover </button>
+                <button className="add-cart-button" onClick={() => handleRemoverItem(cartItem.id)}> Remover </button>
+
+                {/* <button className="plus-cart-button" onClick={() => handleAdicionarQtd(cartItem.qtdEstoque)}>+</button>
+
+                <button className="minus-cart-button">-</button> */}
               </div>
             );
           })}

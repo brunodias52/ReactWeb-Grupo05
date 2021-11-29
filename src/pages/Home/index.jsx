@@ -35,10 +35,17 @@ const MyHome = () => {
       };
 
   function handleRemoverItem(productID){
-    console.log(productID)
-    const filteredCart = cart.filter( productID => cart.indexOf(productID) !== productID);
+    const filteredCart = cart.filter( product => product.id !== productID);
     setCart(filteredCart);
   }
+
+  /* function handleAdicionarQtd(productQtd){
+    console.log("Este aqui")
+    console.log(product)
+
+    const addProduct = cart.filter( product.qtdEstoque => product + 1)
+    setCart(addProduct);
+  } */
   
 
 function handleSearch() {
